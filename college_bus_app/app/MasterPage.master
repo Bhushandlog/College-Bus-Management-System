@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
+    <title>College Bus Management</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+    />
+    <!-- https://fonts.google.com/specimen/Open+Sans -->
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <nav class="navbar navbar-expand-xl">
+        <div class="container h-100">
+          <a class="navbar-brand" href="dashboard.aspx">
+            <h1 class="tm-site-title mb-0">College Bus Management</h1>
+          </a>
+          <button
+            class="navbar-toggler ml-auto mr-0"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars tm-nav-icon"></i>
+          </button>
+
+            <asp:Label ID="lblmobile" runat="server" Visible="false"></asp:Label>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto h-100">
+              <li class="nav-item">
+                <a class="nav-link" href="DailyPresenty.aspx">
+                  Daily Presenty
+                </a>
+              </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="ViewBusDetails.aspx">
+                  View Bus Details
+                </a>
+              </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="Add-Complaints.aspx">
+                  Add Complaints
+                </a>
+              </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="StudentQRCodeShow.aspx">
+                  Show QR Code
+                </a>
+              </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="MakePayment.aspx">
+                  Make Payment
+                </a>
+              </li>
+
+
+              
+              <li class="nav-item">
+                <a class="nav-link" href="Default.aspx">
+                  Logout
+                </a>
+              </li>
+
+              <%--<li class="nav-item">
+                <a class="nav-link" href="accounts.html">
+                  Accounts
+                </a>
+              </li>--%>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- https://jquery.com/download/ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- https://getbootstrap.com/ -->
+</body>
+</html>
